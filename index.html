@@ -1,0 +1,608 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1" />
+<head>
+
+   <title>Gerador de Assinatura de Email</title>
+
+   <meta charset="ISO-8859-1">
+   <meta name="description" content="Tenha uma assinatura de e-mail que gera oportunidades de negócios para você e sua empresa!">
+   <meta name="keywords" content="gerador de assinatura de email gratuito,gerador de assinatura de email, gerador de assinatura, assinatura de e-mail">
+   <meta name="author" content="Jorge Rodrigues - Concepção Web">
+   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=3">
+   <meta name="theme-color" content="#121d1f">
+
+   
+  
+
+   
+   <link rel="stylesheet" type="text/css" href="css/zera.css">
+   <link rel="stylesheet" type="text/css" href="fontes/stylesheet.css">
+   <link rel="stylesheet" type="text/css" href="css/myFlexGrid.css">
+   <link rel="stylesheet" type="text/css" href="css/myFramework.css">
+   <link rel="stylesheet" type="text/css" href="css/menus.css">
+   <link rel="stylesheet" type="text/css" href="css/style.css">   <link rel="stylesheet" href="css/jquery-ui-1.12.1.css" type="text/css">
+   <link rel="stylesheet" href="css/animacao.css" type="text/css">
+   <link rel="stylesheet" href="css/clone.css" type="text/css">
+   <link rel="stylesheet" href="css/gerador_assinatura_email.css" type="text/css">
+
+   
+   <script src="js/jquery-1.12.4.js"></script>
+   <script src="js/jquery.contador_caracteres_V3.js"></script>
+   <script src="js/jquery.mascaras_campos.js"></script>
+   <script src="js/script.js"></script>
+   <script src="js/jquery-ui-1.12.1.js"></script>
+   <script src="js/copyClipboard.js"></script>
+   <script src="js/gerador_assinatura_email.js"></script>
+
+</head>
+<body>
+
+
+   <header>
+
+      
+      <div class="head1 text_center">
+
+         <div class="media">
+
+            <div class="grid">
+
+               <div class="box">
+                  <a href="https://diagonal.social/">
+                     <img src="imagens/logo_concepcaoweb_alta.fw.png" width="200" height="auto" alt="">
+                  </a>
+
+
+         <div id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+         </div>
+
+      </div>
+   </header>
+
+
+
+   <div id="corpo">
+
+      <section id="header2" class="text_center">
+         <div class="media">
+            <p>Gerador de Assinatura de E-mail</p>
+         </div>
+      </section>
+
+<!--
+      <section id="apresentacao">
+
+         <div class="media">
+
+            <div class="media grid">
+
+               <div class="a">
+
+                  <img class="vertical-center" src="imagens/AdobeStock_227420545.png" width="1000" height="718" alt="">
+
+               </div>
+
+               <div class="b">
+
+                  <div>
+
+                     <h1>Transforme todos os seus e-mails em oportunidades de negócio!</h1>
+
+                     <div class="texto_destaque">
+
+                        <p>Você ainda se pergunta se uma assinatura de e-mail pode trazer oportunidades reais?</p>
+
+                        <p>Conheça a ferramenta ideal para impulsionar seu personal branding, aumentar sua taxa de cliques e gerar oportunidades de negócios automaticamente. 100% gratuita para todos os clientes de e-mail, como Gmail, Outlook, Apple Mail e outros!</p>
+
+                        <p>O que está esperando?</p>
+
+                     </div>
+
+                  </div>
+
+               </div>
+
+            </div>
+
+         </div>
+
+      </section>
+>-->
+
+      <section id="destaque">
+
+         <div class="small texto_destaque" style="margin-top:0;">
+
+            <p style="margin-top:0;">
+               Preencha os campos abaixo de acordo com as suas necessidades. Você poce preencher
+               apenas os campos referetes às informações que você deseja incluir na sua assinatura.
+            </p>
+
+            <p>
+               Use o preview <span class="aolado">ao lado</span> <span class="abaixo">abaixo</span>
+               do formulário para ver como ficará a sua assinatura
+               de e-mail.
+            </p>
+
+            <!--
+            <p>
+               Após preencher os campos com as informações que você deseja incluir na assinatura, clique
+               no botão <i>Copiar assinatura</i> para copiar a assinatura para a área de transferência e
+               depois cole nas configurações de assinatura de e-amil do seu serviço de email como o Gmail
+               ou Hotmail, ou no seu programa cliente de e-mail como o Outlook.
+            </p>
+
+            <p>
+               Se o seu serviço de e-mail ou o programa que você usa para ler suas
+               mensagens não aceitar a cópia da assinatura de e-mail profissional e aceitar apenas a
+               inclusão de código HTML, clique no botão <i>Gerar código</i> e depois em <i>Copiar código da assinatura</i>.
+            </p>
+            -->
+
+         </div>
+
+      </section>
+
+
+      <section id="aplication">
+
+         <!-- Tela principal - UID -->
+         <div id="telaform" class="media grid grid1">
+
+            <div class="box">
+
+               <div id="tabs">
+
+                  <ul>
+                     <li><a href="#geral">Geral</a></li>
+                     <li><a href="#contatos">Contatos</a></li>
+                     <li><a href="#imagens">Foto</a></li>
+                  </ul>
+
+
+                  <div id="geral">
+                     
+                     <form id="tab-general">
+
+                        <input type="hidden" value="" name="traffic_value">
+
+                        <div class="form-group row">
+                           <label class="col-form-label" for="nomecompleto">Nome*</label>
+                           <div class="col-sm-9">
+                              <input id="nomecompleto" name="nomecompleto" type="text" value="" required placeholder="Seu nome">
+                           </div>
+                        </div><!--
+                        <div class="form-group row">
+                           <label class="col-form-label" for="cargo">Cargo</label>
+                           <div class="col-sm-9">
+                              <input name="cargo" type="text" value="" placeholder="Informe o seu cargo">
+                           </div>
+                        </div>--><!--
+                        <div class="form-group row">
+                           <label class="col-form-label" for="departamento">Diretoria</label>
+                           <div class="col-sm-9">
+                              <input name="departamento" type="text" value="" placeholder="Qual o seu departamento">
+                           </div>
+                        </div>-->
+                        <div class="form-group row">
+                           <label for="empresa">Departamento</label>
+                           <div class="col-sm-9">
+                              <input name="empresa" type="text" value="" placeholder="Nome da sua empresa">
+                           </div>
+                        </div>
+                        <div class="form-group row">
+                           <label class="col-form-label" for="email">Email*</label>
+                           <div class="col-sm-9">
+                              <input name="email" type="email" value="" required type="email" placeholder="seuemail@empresa.com">
+                           </div>
+                        </div><!--
+                        <div class="form-group row">
+                           <label class="col-form-label" for="website">Website</label>
+                           <div class="col-sm-9">
+                              <input name="website" type="text" value="" placeholder="www.seusite.com.br">
+                           </div>
+                        </div>-->
+                     </form>
+                  </div>
+
+
+                  <div id="contatos">
+                     
+                     <form id="tab-contacts" novalidate="" class="ng-untouched ng-pristine ng-valid">
+
+                        <div class="form-group row">
+                           <label for="telefone">Telefone</label>
+                           <div class="col-sm-9">
+                              <input name="telefone" type="tel" value="" placeholder="(99) 9999-9999">
+                           </div>
+                        </div>
+
+                        <div class="form-group row">
+                           <label for="celular">Celular</label>
+                           <div class="col-sm-9">
+                              <input name="celular" type="tel" value="" placeholder="(99) 99999-9999">
+                              <span id="checkbox_whatsapp">
+                                 <input name="whatsapp" type="checkbox">
+                                 <label class="col-form-label" for="whatsapp">Whatsapp?</label>
+                              </span>
+                           </div>
+                        </div><!-- 
+                        <div class="form-group row">
+                           <label for="skype">Skype</label>
+                           <div class="col-sm-9">
+                              <input name="skype" type="text" value="" placeholder="">
+                           </div>
+                        </div>-->
+                        <div class="form-group row">
+                           <label for="endereco">Endereço</label>
+                           <div class="col-sm-9">
+                              <input name="endereco" type="text" value="" placeholder="">
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+
+
+                  <div id="imagens">
+                     
+                     <form id="tab-images">
+
+                        <div class="form-group">
+
+                           <label for="foto">Insira um outro logotipo caso seja de consórcios</label>
+                           <div class="col-sm-9">
+
+                              <!--<p class="text_small">
+                                 Copie e cole o endereço da sua foto de perfil da sua rede social e cole aqui.
+                                 Veja abaixo instruções de como fazer.
+                              </p>
+
+                              <p class="text_small">
+                                 Você também pode transferir uma foto do seu computador ou tirar uma selfie no smartphone
+                                 mas sempre dê preferência por utilizar a foto de perfil da sua rede social.
+                              </p>-->
+
+                              <!--
+                              Este grupo eh usado apenas no upload da foto
+                              -->
+                              <div>
+                                 <!-- MAX_FILE_SIZE deve preceder o campo input -->
+                                 <input type="hidden" name="MAX_FILE_SIZE" value="5000000">
+                                 <!-- O Nome do elemento input determina o nome da array $_FILES -->
+                                 <input id="arquivo" name="arquivo" type="file" accept='image/*' value="">
+                                 <input id="selfie" name="selfie" type="file" accept='image/*' value="" capture>
+                              </div>
+
+                              <!--
+                              Este grupo é usado como mascara do grupo acima que fica invisivel
+                              e para fotos de perfis das redes sociais.
+                              -->
+                              <div id="tools_images">
+                                 <input id="foto" name="foto" type="text" value="" placeholder="../../servidordasuaimagem.com/suaimagem.jpg">
+                                 <button id="btn_upload" class="button">
+                                    <img class="icones animated bounce" src="imagens/nuvem.png" width="80" height="80" alt="">
+                                    <span>Selecionar</span>
+                                 </button>
+                                 <button id="btn_camera" class="button right">
+                                    <img class="icones" src="imagens/camera.png" width="80" height="80" alt="">
+                                    <span>Tirar foto</span>
+                                 </button>
+                              </div>
+
+                           </div>
+
+                           <!--<button class="btn btn-link">
+                              Veja como usar a foto do seu perfil nas redes sociais
+                           </button>-->
+
+                           <div class="panel-collapse collapse">
+
+                              <div class="card-body">
+                                 <ol class="text_small">
+                                    <li>
+                                       Acesse a sua conta no Facebook, Gmail, Hotmail, Instagram ou Linkedin.
+                                    </li>
+                                    <li>
+                                       Vá até a página do seu perfil.
+                                       <ul>
+                                          <li>
+                                             No Facebook acesso o seu perfil, clique na sua foto do perfil, depois em <i>Ver foto do perfil</i>.
+                                          </li>
+                                          <li>
+                                             No Gmail, clique na sua foto de perfil localizada no canto superior direito para ver as informações da sua conta.
+                                          </li>
+                                          <li>
+                                             No Hotmail, clique na sua foto de perfil localizada no conto superior direito e depois em <i>Meu perfil</i>.
+                                          </li>
+                                          <li>
+                                             No Instagram e no Linkedin, clique na sua foto de perfil para acessar o seu perfil.
+                                          </li>
+                                       </ul>
+                                    </li>
+                                    <li>
+                                       Clique com o botão direito sobre a foto do perfil e em seguida selecione <b>"Copiar endereço da imagem"</b>.
+                                    </li>
+                                    <li>
+                                       Agora é só colar <b>(Ctrl + V ou Command + V)</b> no campo acima.
+                                    </li>
+                                 </ol>
+                              </div>
+
+                           </div>
+
+                        </div>
+
+
+                        <!--<div class="form-group">
+
+                           <label for="foto_href">Link da sua imagem</label>
+                           <div class="col-sm-9">
+                              <input name="foto_href" type="text" value="" placeholder="https://www.diagonal.social/">
+                           </div>
+
+                           <p class="text_small">
+                              Insira aqui um link para que sua imagem redirecione seus contatos para seu site
+                              ou para o seu perfil nas redes sociais como LinkedIn, Facebook ou instagram.
+                           </p>
+
+                        </div>-->
+
+                     </form>
+                  </div>
+
+               </div>
+
+            </div>
+
+            <div class="box">
+
+               <div id="demo">
+
+                  <div id="demo_tit" class="full">
+                     Preview da assinatura
+                  </div>
+
+                  <div id="demo_content" class="full">
+
+                     <div>
+
+                        <p>Para
+                           <span>João Silva</span>
+                        </p>
+                        <hr>
+
+                        <p>Assunto
+                           <span>Veja a minha nova assinatura de email!</span>
+                        </p>
+                        <hr>
+
+                        <p>
+                           Olá, João,<br>
+                           Olha que legal a nova assinatura de email que criei com o
+                           Gerador de Assinatura.
+                           <br><br>
+                           Saudações,<br>
+                           ——
+                        </p>
+
+                        <section id="preview_assinatura">
+
+
+                           <table id="table_assinatura" style="font-size: 14px !important; font-family: Arial !important;">
+   <tbody>
+      <tr>
+         <td id="contem_foto" valign="top">
+            <img alt="Sua foto ou logo" class="picture" style="border-radius:0px; border:0px solid #e0e0e0 !important; width: 300px; height: auto;" src="http://www.diagonal.net/images/assinatura.png">
+         </td>
+         <td style="padding:0 8px 0 8px; vertical-align:top;">
+            <p id="name-color" style="font-family:arial; font-size: 14px; font-weight: bold; color: rgb(33, 37, 41); margin:0; padding:0; line-height:23px;">
+               Nome Sobrenome
+            </p>
+            <p id="empresa" style="font-family:arial; margin:0; padding:0; line-height:23px;">
+               Diagonal Social
+            </p>
+            <p id="telefone" style="display:yes; font-family:arial; margin:0; padding:0; line-height:23px;">
+               +55 99 9999-999
+            </p>
+            <p id="celular" style="display:none; font-family:arial; margin:0; padding:0; line-height:23px;">
+               +55 21 99999-999
+            </p>
+			<!-- 
+            <p id="skype" style="display:none; font-family:arial; margin:0; padding:0; line-height:23px;">
+               Skype:
+			   -->
+            </p>
+            <p id="email" style="font-family:arial; margin:0; padding:0; line-height:23px;">
+               seu.email@diagonal.social
+            </p>
+            <p id="site" style=" font-family:arial; margin:0; padding:0; line-height:23px;">
+               <a style="color: inherit !important;  text-decoration:none;" href="http://www.diagonal.social/" target="_blank">
+                  www.diagonal.social
+               </a>
+            </p>
+            <p id="endereco" style="display:none; font-family:arial; margin:0; padding:0; line-height:23px;">
+               Rua Sem Saida, sem número
+            </p>
+         </td>
+      </tr>
+   </tbody>
+</table><!--
+<p style="font-size:14px; font-family:Arial; color: #BBBBBB !important; margin:30px 0 0 0; padding:0">
+   Crie a sua
+   <a style="font-size:14px; font-family:Arial; color: #BBBBBB !important;" href="https://diagonal.social" target="_blank">
+      própria assinatura
+   </a>
+</p>-->
+<br><br>
+
+
+                        </section>
+
+                     </div>
+
+                  </div>
+
+               </div>
+
+            </div>
+
+         </div>
+         <!-- Fim da tela principal - UID -->
+
+      </section>
+
+
+
+
+      <section id="code_view">
+
+         <div class="media grid">
+
+            <div class="box">
+
+               <textarea id="signature-source-code" rows="10" readonly="readonly"></textarea>
+
+            </div>
+
+            <div class="box">
+
+               <p>
+                  Se o cliente de e-mail que
+                  você usa para ler suas mensagens suporta assinaturas em HTML, copie e
+                  cole o código <span class="aolado">ao lado </span><span class="abaixo">acima</span>
+                  no seu serviço ou cliente de e-mail.
+               </p>
+
+               <button id="copy_html" class="btn">Copiar código da assinatura</button>
+
+            </div>
+
+         </div>
+
+      </section>
+
+
+      <section id="buttons_bar">
+
+         <div id="contem_gerar" class="media">
+
+            <button id="voltar" class="btn btn-success" title="Voltar para a tela de edição.">Voltar</button>
+            <button id="copy_clipboard" class="btn btn-success" title="Copie a assinatura para usar no Gmail e Hotmail.">Copiar assinatura</button>
+            <button id="gerar_html" class="btn btn-success" title="Copie o código HTML da assinatura.">Gerar código</button>
+
+         </div>
+
+      </section>   <!-- fim secao buttons_bar -->
+
+
+
+      <section id="instrucoes">
+
+         <div class="media">
+
+            <h2>INSTRUÇÕES</h2>
+
+            <p>
+               Se você clicou no botão <i>Copiar assinatura</i> deve seguir os passos abaixo para
+               incluir a assinatura de e-mail profissional no Gmail ou no Hotmail.
+            </p>
+<!--
+            <h3>Gmail</h3>
+
+            <ul>
+               <li>Acesse a sua conta no Gmail.</li>
+               <li>No canto superior direito, próximo a foto do seu perfil, clique no ícone da catraca ou de "dodinha".</li>
+               <li>Clique em <i>Ver todas as configurações</i> e a tela de configurações do Gmail será exibida.</li>
+               <li>Em <i>Geral</i>, role a tela até encontrar a seção <i>Assinatura</i>.</li>
+               <li>Clique em <i>Criar nova</i> e de um nome para essa nova assinatura, por exemplo <i>Assinatura de e-mail profissional</i>.</li>
+               <li>No campo texto ao lado do nome da assinatura, pressione Ctrl_V para colar a assinatura que você copiou nesta ferramenta.</li>
+               <li>Um pouco mais abaixo, em <i><b>Padrões de assinatura</b></i>, selecione a nova assinatura em <i><b>PARA USO EM NOVOS E-MAILS</b></i> e <i><b>PARA USO EM RESPOSTAS/ENCAMINHAMENTOS</b></i>. Isto fará com que a nova assinatura seja a padrão para os novos e-mails.</li>
+            </ul>
+
+            <p>
+               Depois que a assinatura estiver configurada, crie uma nova mensagem de e-mail para enviar como teste.
+               A assinatura que você acabou de criar deverá ser exibina na mensagem. Se ela não aparecer ou caso você
+               desejar alternar entre as assinaturas, na barra de ferramentas na parte inferior do editor, clique no
+               ícone da caneta (Inserir assinatura), e selecione a assinatura de e-mail que você deseja usar na mensagem
+               que está sendo editada.
+            </p>
+
+            <br>
+-->
+            <h3>Outlook</h3>
+
+            <ul>
+               <li>Acesse a sua conta no hotmail.</li>
+               <li>No canto superior direito, próximo a foto do seu perfil, clique no ícone da catraca ou de "rodinha".</li>
+               <li>No final da coluna de configurações, clique em <i>Exibir todas as configurações do Outlook</i>.</li>
+               <li>Em <i>E-mail</i>, selecione a seção <i>Redigir e responder</i>.</li>
+               <li>Em <i>Assinatura de email</i>, cole a assinatura que você copiou nesta ferramenta.</li>
+               <li>Clique em <i>Salvar</i> para gravar a alteração.</li>
+            </ul>
+
+         </div>
+
+      </section>   <!-- fim secao instrucoes -->
+
+
+   </div> <!-- fim corpo -->
+
+
+<!-- 
+   <footer>
+
+      
+      <div class="media">
+
+         <div class="grid">
+
+            <div class="box">
+               <h2>Concepção Web</h2>
+               <ul class="menu-vv">
+                  <li><a href="https://www.concepcaoweb.com.br/apresentacao/">A empresa</a></li>
+                  <li><a href="https://www.concepcaoweb.com.br/servicos/">Serviços</a></li>
+                  <li><a href="https://www.concepcaoweb.com.br/portifolio/">Portfólio</a></li>
+               </ul>
+            </div>
+
+            <div class="box">
+               <h2>Ferramentas</h2>
+               <ul class="menu-vv">
+                  <li><a href="gerador_qrcode.html">Gerador de QR Code</a></li>
+                  <li><a href="gerador_link_whatsapp.html">Gerador de link do Whatsapp</a></li>
+                  <li><a href="gerador_assinatura_email.html">Gerador e assinaturas de e-mail</a></li>
+               </ul>
+            </div>
+
+            <div class="box">
+               <h2>Contatos</h2>
+
+               <p class="glyph email">
+                  <a href="mailto:contatos&#64concepcaoweb&#46com&#46br" target="_blank">contatos&#64concepcaoweb&#46com&#46br</a>
+               </p>
+               <p class="glyph whatsapp">
+                  <a href="https://api.whatsapp.com/send?phone=5521969432668&amp;text=" target="_blank">+5521969432668</a> (somente Whatsapp)
+               </p>
+            </div>
+
+         </div>
+
+         <div id="copyright">
+            &copy; 2020 - Todos os direitos reservados
+            <br>
+            <a href="http://concepcaoweb.com.br/" target="_blank">
+               Concepção Wed Desenvolvimento de Sites
+            </a>
+         </div>
+
+      </div>
+
+   </footer>
+-->
+</body>
+
+</html>
