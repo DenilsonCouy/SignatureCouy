@@ -1,0 +1,178 @@
+/* CSS Document */
+
+/* Micox CSS mini-lib 1.0 - 22/02/2008 - elmicox.blogspot.com
+   A leitura dos comentários é obrigatória para o entendimento */
+
+/* padronizando propriedades pros navegadores ficarem parecidos e corrigindo alguns bugs */
+* {
+   margin: 0;
+   padding: 0;
+   outline: 0;
+   font-weight: inherit;
+   font-style: inherit;
+   /*ffffont-size: 100%;*/
+   font-family: inherit;
+   line-height: 1.1em;
+   vertical-align: baseline;
+   /* teoricamente evita fontes serrilhadas */
+   /* CSS3*/
+   -webkit-text-size-adjust: none;
+   -webkit-font-smoothing: antialiased;
+   -webkit-text-shadow: rgba(46,46,46,0.2) 0 0 1px;
+   text-shadow: 0 0 1px rgba(46,46,46,0.2);
+}
+body * {
+   font-size: inherit;
+   white-space: normal;
+   word-break: break-word;
+}
+p { margin: 1.5em 0; color: inherit; }
+hr { clear: both; float: none; width: 100%; }
+* html body hr { margin: -7px; display: block;}  /* os hr tem uma altura extra misteriosa no IE */
+a, img { border: none; }
+img { display: block; vertical-align: middle;}
+fieldset { display: block; border: 2px ridge #FFF; padding: 10px; } /* fieldset não é block em todos */
+ul, ol { margin-left: 1.5em; list-style-position: outside; }
+li { vertical-align: top; line-height: 1.6em;}  /* IE: posição vertical do marcador no IE  e espaço extra fantasma em lis*/
+li a { zoom: 1; line-height: 1.2em; }  /* complemento do anterior */
+input[type=hidden]{ display: none !important; visibility: hidden !important;} /* input hidden no FF */
+button { /*border: 1px outset #AAA;*/ }
+legend { margin-bottom: 1.4em; } /* Fixes incorrect styling of legend in IE6 fieldsets. */
+label { display: block;}
+table { border-collapse: separate; border-spacing: 1; }
+caption, th, thead, tfoot { text-align: center; font-weight: bold; }
+blockquote:before, blockquote:after,q:before, q:after { content: “”; }
+blockquote, q { quotes: "" ""; }
+pre { white-space: pre-wrap; /* css-3 */ white-space: -moz-pre-wrap !important; /* FF 1999 */
+ white-space: -pre-wrap; /* OP 4-6 */ white-space: -o-pre-wrap; /* OP 7 */  word-wrap: break-word; /* IE 5.5+ */
+}
+a { cursor: pointer; }
+h1 { font-size: 2.5em; font-weight: normal; color: inherit;}
+h2 { font-size: 1.7em; font-weight: normal; color: inherit;}
+h3 { font-size: 1.5em; font-weight: normal; color: inherit;}
+h4 { font-size: 1.2em; font-weight: normal; color: inherit;}
+h5 { font-size: 1.1em; font-weight: normal; color: inherit;}
+h6 { font-size: 1em; font-weight: bold; color: inherit;}
+
+b { font-weight: bold; }
+i { font-style: italic; }
+
+nav { display: table; width: auto; height: auto; }
+
+span { vertical-align:text-top; }
+
+input,
+select {
+   padding: 5px;
+}
+
+
+/* centralizando o container (que tem todo o conteúdo da página) */
+#container { margin: auto; vertical-align: middle; }
+
+
+/* classes úteis na formatação */
+.screenreader { display: none; }
+.ak { text-decoration: underline; /* access keys */ }
+.u { text-decoration: underline; /* textos underline */}
+.notice { background-color: #F9FF9A; /*yellow*/}
+.error {
+   /*background-color: #FF8E8E;*/ /*red*/
+   color:#CC0000;
+   font-weight: bold;
+}
+.highlight  { background:#ff0; }
+
+/* para não precisar do famoso div wrapper [http://www.positioniseverything.net/easyclearing.html] */
+.clearfix { display: inline-block; }
+.clearfix:after, .container:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix { display: block; zoom: 1; }
+
+/* fazendo colunas com alturas iguais [http://www.positioniseverything.net/articles/onetruelayout/equalheight] */
+.paifullcols { overflow: hidden; width: 99.8%; display: inline-block; }
+.paifullcols:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.paifullcols { display: block; zoom: 1; }
+.paifullcols .fullcol { float: left; padding-bottom: 1000em; margin-bottom: -999.5em; width: auto }
+
+/* classes para debug: borderchilds, borderdivs e bordercols */
+.borderchilds * { border: 1px dashed #CCC;}
+.borderchilds span, .borderchilds a, .borderchilds b, .borderchilds strong, .borderchilds i, .borderchilds em,
+.borderchilds legend, .borderchilds br { border: none;}
+.borderchilds p { border-color: blue; }
+.borderchilds div { border-color: red; }
+.borderchilds table { border-color: green; }
+.borderchilds ul, .borderchilds ol { border-color: cyan; }
+.borderchilds .fullcol { border: 1px solid black;}
+.borderdivs div, .bordercols .fullcol, .bordercols .paifullcols { border: 1px dashed red;}
+
+
+/**
+* padding e a border não serão atribuidas a largura do elemento
+*/
+* {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/*
+  Menus drop-down horizontal-vertical (hv) e vertical-vertical (vv) até 4 níveis
+  by Micox - elmicox.blogspot.com - Ver. 2.0 - 20/02/08 - Creative Commons License
+*/    
+.menu-hv, .menu-vv { position: relative; margin: 0; padding: 0; display: block; zoom: 1; transition-duration: 0s;}
+ .menu-hv * ,    .menu-vv * { margin: 0; padding: 0 ; list-style: none}
+ .menu-hv li ,   .menu-vv li { position: relative; line-height: 1.2em; vertical-align: top }
+ .menu-hv a ,    .menu-vv a { display: block; zoom: 1; line-height: 1.2em }
+ .menu-hv li ul, .menu-vv li ul { position: absolute; visibility: hidden  }
+ .menu-hv li:hover ul,  .menu-vv li:hover ul,
+ .menu-hv li.hover ul,  .menu-vv li.hover ul { visibility: visible; }
+ .menu-hv li:hover ul ul,  .menu-vv li:hover ul ul,
+ .menu-hv li.hover ul ul,  .menu-vv li.hover ul ul { visibility: hidden }
+ .menu-hv li li:hover ul,  .menu-vv li li:hover ul,
+ .menu-hv li li.hover ul,  .menu-vv li li.hover ul { visibility: visible }
+ .menu-hv li li:hover ul ul,  .menu-vv li li:hover ul ul,
+ .menu-hv li li.hover ul ul,  .menu-vv li li.hover ul ul { visibility: hidden }
+ .menu-hv li li li:hover ul,  .menu-vv li li li:hover ul,
+ .menu-hv li li li.hover ul,  .menu-vv li li li.hover ul { visibility: visible }
+ /* características horizontal-vertical */
+ .menu-hv:after, .menu-hv.after { content: "."; line-height: 0px; clear: both; display: block; visibility: hidden}
+ .menu-hv li { float: left; }  
+ .menu-hv li ul li { float: none; }
+ .menu-hv li ul li ul { position: absolute; left: 100%; top: 0; }
+ /* características vertical-vertical */
+ .menu-vv { float: left; } 
+ .menu-vv li ul { left: 100%; top: 0; }
+ /* ****************************************
+   ALTERE ABAIXO. defina a largura dos itens do seu menu abaixo
+   ou apague as linhas se for definir em outro lugar */
+ .menu-hv li { width: auto; background-color: transparent }
+ .menu-vv li { width: auto; background-color: transparent }
+ .menu-hv li a:hover { background-color: gray }
+ .menu-vv li a:hover { background-color: gray }
+ 
+/* Micox Pseudo-class-css2 to IE (MXPC). Activate .hover and .first-child in IE 6 */
+* html * { color: expression( (function(who){ if(!who.MXPC && who.nodeName != 'A'){
+ who.MXPC = '1';
+ who.onmouseenter=function(){ who.className += ' hover'};
+ who.onmouseleave=function(){ who.className = who.className.replace(' hover','')};
+ (who==who.parentNode.firstChild) ? who.className += ' first-child' : '' ;
+} } )(this) , 'auto') }
+
+
+/*** MOBILE MEDIA */
+@media (max-width:767px) {
+
+   li { padding: 5px 0; vertical-align: top; line-height: 1.6em;}  /* IE: posição vertical do marcador no IE  e espaço extra fantasma em lis*/
+
+}
+
+/*** TABLE MEDIA */
+@media (min-width:768px) and (max-width:1023px) {
+
+}
+
+/*** DESKTOP MEDIA */
+@media (min-width: 1024px) {
+
+}
+

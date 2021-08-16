@@ -1,0 +1,175 @@
+/**
+* Folha de estilos principal
+*/
+
+
+.abaixo,
+.aolado {
+   margin: 0;
+   padding: 0;
+   line-height: 1.2em;
+}
+.aolado {
+   display: inline;
+}
+.abaixo {
+   display: none;
+}
+
+
+#apresentacao {
+   padding: 0;
+   background-color: #e0e0e0;
+}
+#apresentacao .grid .a img {
+   position: absolute;
+   bottom: 0;
+}
+#apresentacao .grid .b {
+   height: auto;
+   padding-top: 90%;
+}
+#apresentacao .grid .b .vertical-center {
+   position: absolute;
+   top: 50%;
+   -ms-transform: translateY(-50%);
+   transform: translateY(-50%);
+}
+
+
+#aplication {
+   padding: 80px 0;
+   background-color: #F5FFF5;
+}
+#aplication .grid {
+   grid-gap: 0 10%;
+   grid-template-columns: 45% 45%;
+   grid-template-areas: 'a b';
+}
+#aplication form {
+   /*margin-top: 40px;*/
+}
+#aplication form h1 {
+   margin-bottom: 40px;
+}
+
+
+#mensagem {
+   width: 100%;
+   height: 60px;
+}
+
+#text_link {
+   display: table;
+   width: 100%;
+   height: auto; /*100px;*/
+   padding: 13px;
+   border: 1px solid #bbb;
+   background-color: #fff;
+   font-size: .9em;
+}
+
+label[for="mensagem"] > span {
+   font-size: .9em;
+}
+
+textarea,
+input[type="tel"] {
+   width: 100%;
+   padding: 9px 5px;
+}
+input[type="radio"] {
+   width: 15px;
+   height: 15px;
+   margin-bottom: 10px;
+}
+
+textarea {
+   resize: none;
+}
+
+#view {
+   display: none;
+}
+
+
+
+#show_qrcode #qrc {
+   display: block;
+   width: 100%;
+   text-align: center;
+}
+#show_qrcode #qrc img {
+   margin: 0 auto;
+}
+
+
+
+/*** MOBILE MEDIA */
+@media (max-width:767px) {
+
+   input[type="radio"] {
+      width: 20px;
+      height: 20px;
+      margin-bottom: 10px;
+   }
+
+
+   #apresentacao {
+      padding: 50px 0 80px;
+   }
+   #apresentacao .grid .a img {
+      position: initial;
+      bottom: initial;
+   }
+   #apresentacao .grid .b {
+      padding: 0;
+   }
+   #apresentacao .grid .b .vertical-center {
+      position: initial;
+      top: unset;
+      -ms-transform: none;
+      transform: none;
+   }
+
+
+   #aplication .grid {
+      grid-gap: 60px 0;
+      grid-template-columns: 100%;
+      grid-template-areas: 'b' 'a';
+   }
+
+   #mensagem {
+      width: 100%;
+      height: 100px;
+   }
+
+}
+
+/*** TABLE MEDIA */
+@media (min-width:768px) and (max-width:1023px) {
+
+   #apresentacao .grid {
+      grid-gap: 0 0;
+   }
+   #apresentacao .grid .a img {
+      top: unset;
+      bottom: 0;
+      transform: unset;
+   }
+   #apresentacao .grid .b {
+      padding: 50px 0;
+   }
+   #apresentacao .grid .b .vertical-center {
+      position: initial;
+      top: unset;
+      -ms-transform: none;
+      transform: none;
+   }
+
+}
+
+/*** DESKTOP MEDIA */
+@media (min-width: 1024px) {
+
+}

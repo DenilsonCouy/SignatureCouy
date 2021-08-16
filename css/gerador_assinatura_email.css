@@ -1,0 +1,384 @@
+/**
+*  Folha de estilo principal
+*/
+@charset "ISO-8859-1";
+
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+   border: var(--azul);
+   background: var(--azul);
+}
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+   color: var(--preto);
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
+.ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,
+.ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
+   color: #fff;
+   font-family: "QuicksandBold"
+}
+
+
+#apresentacao {
+   padding: 50px 0;
+   background-color: #EFEFF7; /*#dfe5f1;*/
+}
+#apresentacao .grid .b {
+
+}
+
+
+#signature-source-code {
+   width: 100%;
+}
+
+
+#aplication {
+   padding: 80px 0 0 0;
+}
+/*#aplication .grid {
+   border: 1px dotted red;
+}
+#aplication * {
+   border: 1px dotted green;
+}*/
+
+
+#aplication .grid1 {
+   grid-gap: 0 5%;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-areas: '. .';
+}
+#aplication #tabs {
+   min-height: 500px;
+}
+
+
+#aplication #checkbox_whatsapp {
+   display: inline-block;
+   margin: 10px 0;
+}
+#aplication #checkbox_whatsapp input[name="whatsapp"] {
+   width: 20px;
+   height: 20px;
+}
+#aplication #checkbox_whatsapp label {
+   display: inline;
+   line-height: inherit;
+   vertical-align: text-top;
+}
+
+
+
+#aplication #demo {
+   min-height: 100%;
+   border: 1px solid #CCCCCC;
+   border-radius: 4px;
+   overflow: hidden;
+}
+#aplication #demo_tit {
+   padding: 10px;
+   color: var(--azure);
+   font-family: 'QuicksandBold';
+   background-color: var(--azul);
+}
+#aplication #demo_content {
+   padding: 15px;
+   color: #BBBBBB;
+   font-size: .8em;
+   font-family: "HeptaSlab";
+}
+#aplication #demo_content #preview_assinatura {
+   color: #888;
+}
+#aplication #demo_content #preview_assinatura #texto_assina {
+}
+
+
+#code_view {
+   display: none;
+   width: 100%;
+   height: 100%;
+   padding-top: 120px;
+}
+#code_view .grid {
+   grid-gap: 0 5%;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-areas: '. .';
+}
+#code_view textarea {
+   width: 100%;
+   height: 100%;
+   padding: 15px;
+   line-height: 1.5em;
+   color: #2A7AAB;
+   resize: none;
+}
+
+
+section#instrucoes {
+   display: none;
+   padding: 80px 0;
+   background-color: #EEEEEE;
+
+}
+
+
+
+#tab-images .form-group:first-child {
+   margin-bottom: 10px;
+}
+
+
+
+.col-form-label {
+   padding-top: calc(.375rem + 1px);
+   padding-bottom: calc(.375rem + 1px);
+   margin-bottom: 0;
+   font-size: inherit;
+   line-height: 1.5;
+}
+.col-sm-9 input[type="text"],
+.col-sm-9 input[type="email"],
+.col-sm-9 input[type="tel"] {
+   width: 100%;
+   padding: 9px 5px;
+}
+.col-sm-9 input[name="foto"] {
+   width: 90%;
+}
+
+
+
+#tools_images button {
+   width: 7%;
+   padding: 5px;
+   margin-top: 10px;
+   display: inline-block;
+   vertical-align: bottom;
+   text-align: left;
+}
+#tools_images .icones {
+   width: 30px;
+   height: auto;
+   margin: 0 auto;
+}
+#tools_images button span {
+   display: none;
+   vertical-align: middle;
+}
+#tools_images button#btn_camera {
+   display: none;
+}
+
+
+#contem_gerar {
+   padding: 30px 0 50px 0;
+   text-align:right;
+}
+.btn {
+   padding: 5px 20px;
+   font-size: 1.1em;
+   font-family: "QuicksandBold";
+   background-color: #2a7aab;
+   border: 1px solid #2a7aab;
+   color: #FFF;
+}
+.btn:disabled {
+   background-color: #CCCCCC;
+   border: 1px solid #BBBBBB;
+}
+.btn-success {
+   color: #fff;
+   background-color: #4CAB2D;
+   border-color: #28a745;
+}
+.btn:not(:disabled):not(.disabled) {
+   cursor: pointer;
+}
+
+
+
+/*** ABA IMAGENS */
+.card-body {
+   -ms-flex: 1 1 auto;
+   flex: 1 1 auto;
+   padding: 1.25em;
+   border-left: 3.5px solid var(--azul);
+}
+.card-body ol li {
+   margin: 3px 0;
+   line-height: 1.5em;
+}
+.panel-collapse.collapse {
+   margin-bottom: 30px;
+}
+.collapse:not(.show) {
+   display: none;
+}
+
+input#arquivo,
+input#selfie {
+   position: fixed;
+   left: -9999px;
+   visibility: hidden;
+}
+
+/*** FIM ABA IMAGENS */
+
+
+
+/*** ABA SOCIAL */
+#aviso {
+   padding: 20px;
+   margin-bottom: 30px;
+   background-color: var(--creme);
+}
+.social-link {
+   position: relative;
+   margin: 17px 0;
+}
+.social-logo {
+}
+.social-logo img {
+   border-radius: 3px;
+}
+.social-field {
+   width: 83%;
+   margin-left: 9%;
+}
+/*** FIM  ABA SOCIAL */
+
+
+
+/*** ABA DESIGN */
+#design #modelos {
+   grid-template-columns: repeat(3,1fr);
+   grid-template-areas: '. . .';
+   text-align: center;
+}
+#design #modelos input {
+   vertical-align: top !important;
+   display: inline;
+   margin-right: 4px;
+}
+#design #modelos img {
+   display: inline;
+}
+/*** FIM ABA DESIGN */
+
+
+
+
+/*** MOBILE MEDIA */
+@media (max-width:767px) {
+
+   .aolado {
+      display: none;
+   }
+   .abaixo {
+      display: inline;
+   }
+
+
+   #aplication {
+      padding: 50px 0 0 0;
+   }
+   #aplication .grid1 {
+      grid-gap: 20px 0;
+      grid-template-columns: 100%;
+      grid-template-areas: '.' '.';
+   }
+   #aplication #tabs {
+      min-height: 500px;
+   }
+   #aplication #checkbox_whatsapp {
+      display: block;
+      margin-top: 5px;
+   }
+   #aplication #checkbox_whatsapp input[name="whatsapp"] {
+      width: 30px;
+      height: 30px;
+      margin-left: 0;
+   }
+   #aplication #checkbox_whatsapp label {
+      line-height: 2em;
+      vertical-align: text-bottom;
+   }
+
+
+   #contem_gerar .btn {
+      display: block;
+      width: 70%;
+      padding: 13px 0;
+      margin: 0 auto 13px auto;
+   }
+   #voltar.btn {
+      display: none;
+   }
+
+   #code_view {
+      padding: 50px 0 30px 0;
+   }
+   #code_view .grid {
+      grid-gap: 20px 0;
+      grid-template-columns: 100%;
+      grid-template-areas: '.' '.';
+   }
+   #code_view #copy_html {
+      display: block;
+      width: auto;
+      padding: 13px 15px;
+      margin: 0 auto 13px auto;
+   }
+
+   .col-sm-9 input[name="foto"] {
+      width: 100%;
+      margin-bottom: 5px;
+   }
+
+
+   #tools_images button {
+      width: 45%;
+      padding: 3px 5px;
+      margin-top: 0;
+   }
+   #tools_images .icones {
+      display: inline-block;
+      width: 30px;
+      margin: 0;
+   }
+   #tools_images button span {
+      display: inline-block;
+      font-size: .9em;
+   }
+   #tools_images button#btn_camera {
+      display: inline-block;
+   }
+
+}
+
+/*** TABLE MEDIA */
+@media (min-width:768px) and (max-width:1023px) {
+
+}
+
+/*** DESKTOP MEDIA */
+@media (min-width: 1024px) and (max-width:1919px) {
+
+}
+
+/*** DESKTOP MEDIA HIDE */
+@media (min-width: 1920px) {
+
+   body {
+      font-size: 28px;
+   }
+
+}
+

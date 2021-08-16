@@ -1,0 +1,161 @@
+/**
+*   Folha de estilos esclusivas para menus
+*/
+
+
+
+/** Menu principal */
+.menu-hv {
+   font-size: .98em;
+}
+.menu-hv li {
+   background-color: transparent;
+   margin-right: 20px;
+}
+.menu-hv li a:link,
+.menu-hv li a:visited {
+   background-color: transparent;
+   text-decoration: none;
+   color: inherit;
+   border-bottom: 2px solid transparent;
+}
+.menu-hv li a:hover,
+.menu-hv li a:active {
+   text-decoration: nome;
+   border-bottom: 2px solid #2A7AAB;
+}
+
+
+/** Menu do rodape */
+footer .menu-vv {
+
+}
+footer .menu-vv li {
+   text-align: left;
+}
+footer .menu-vv li a:link,
+footer .menu-vv li a:visited {
+   padding: 5px 0;
+   color: inherit;
+}
+footer .menu-vv li a:hover,
+footer .menu-vv li a:active {
+   padding: 5px 0;
+   color: inherit;
+   text-decoration: underline;
+   background-color: transparent;
+}
+footer .menu-vv li:first-child a,
+footer .menu-vv li:last-child a {
+   padding: 0;
+}
+
+
+/** Hemburguer do menu mobile */
+#hamburger {
+   position: absolute;
+   display: none;
+   width: 40px;
+   height: 40px;
+   /* margin: 15px 20px 0 0; */
+   /*margin-top: 3px;*/
+   top: 50%;
+   right: 20px;
+   padding: 8px 0 4px 0;
+   /*float: right;*/
+   /* border: 2px solid #fff; */
+   background-color: #333333;
+   transform: translateY(-50%);
+}
+#hamburger div {
+   width: 75%;
+   height: 3px;
+   margin: 0 auto 7px;
+   background-color: #fff;
+}
+#hamburger div:nth-child(2) {
+   width: 60%;
+}
+#hamburger div:nth-child(3) {
+   width: 50%;
+}
+
+
+nav#menu_principal {
+   position: absolute;
+   right: 0;
+   top: 33%;
+   text-transform: uppercase;
+}
+
+
+
+/*** MOBILE MEDIA */
+@media (max-width:767px) {
+
+   ul.menu-hv {
+      font-size: 1.3em;
+   }
+   ul.menu-hv li {
+      float: none;
+      max-width: unset;
+      margin: 0;
+      text-align: center;
+      border-bottom: 1px solid #333;
+   }
+
+   ul.menu-hv > li a:link,
+   ul.menu-hv > li a:visited {
+      /*height: 100%;*/
+      padding: 6.5vh 10px;
+      letter-spacing: .1em;
+      color: #333;
+      text-transform: uppercase;
+      text-align: center;
+      background-color: transparent;
+      border: none;
+   }
+   ul.menu-hv > li:last-child {
+      border-bottom: none;
+   }
+
+
+   #hamburger {
+      display: block;
+   }
+
+
+   nav#menu_principal {
+      position: fixed;
+      z-index: 100;
+      display: inline-block;   /* so isso fez o overflow-y funcionar */
+      width: 100%;
+      height: 88vh;
+      right: unset;
+      left: -100%;
+      top: 80px;
+      margin: 0;
+      padding: 5px 0;
+      background-color: #DDDDDD;
+      overflow-y: auto;
+   }
+
+}
+
+/*** TABLE MEDIA */
+@media (min-width:768px) and (max-width:1023px) {
+
+   nav#menu_principal {
+      position: inherit;
+      margin: 15px auto 0 auto;
+   }
+
+}
+
+/*** DESKTOP MEDIA */
+@media (min-width: 1024px) {
+
+}
+
+
+

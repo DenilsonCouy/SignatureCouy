@@ -1,0 +1,454 @@
+/**
+*  Folha de estilos principal
+*/
+
+:root {
+   --azul: #2a7aab;
+   --vinho: #a02aab;
+   --verde: #51AB2A;
+   --azure: #f0ffff;
+   --beige: #f5f5dc;
+   --preto: #222222;
+   --cinza: #444444;
+   --creme: #FFF3CD;
+}
+
+
+body {
+   display: table;                      /*** A prop display igual a table, possibilita que */
+   font-size: 16px;                     /*** o footer aparece por debaixo do resto do site */
+   color: var(--preto);                 /*** ao rolar a página. Veja mais na definicao da  */
+   font-familY: "QuicksandRegular";     /*** regra do footer.                              */
+}
+
+input,
+textarea,
+label,
+select {
+   color: inherit;
+}
+textarea {
+   resize: none;
+}
+
+
+
+h1, h2, h3 {
+   margin: 0 0 20px 0;
+}
+h1 {
+   font-size: 2.3em;
+}
+
+ul li {
+   margin: 5px 0;
+   line-height: 1.6em;
+}
+
+p {
+   margin: 1em 0;
+   line-height: 1.4em;
+   color: inherit;
+}
+
+
+a:link,
+a:visited {
+   text-decoration: none;
+   color: inherit;
+}
+a:hover,
+a:active {
+   text-decoration: underline;
+   color: var(--azul);
+}
+p > a {
+   border-bottom: 1px dashed;   /*** sem cor para erdar a cor do texto. */
+}
+
+li {
+   padding: 0 7px;
+
+}
+
+legend {
+   margin: 0;
+   padding: 0 10px;
+   font-weight: bold;
+}
+
+.font_bold {
+   font-family: "QuicksandBold";
+}
+
+.texto_destaque {
+   margin-top: 30px;
+   font-family: "QuicksandLight";
+   font-size: 1.2em;
+}
+.texto_destaque p:first-child {
+   margin-top: 1em;
+}
+.texto_destaque p {
+   line-height: 1.3em;
+}
+
+
+.text_center {
+   text-align: center;
+}
+
+.text_small {
+   font-size: .85em;
+}
+
+
+.oculta {
+   display: none;
+}
+
+
+.glyph:before {
+   font-family: 'fontawesome-webfont';
+   font-size: 1.2em;
+   margin-right: 5px;
+}
+.email:before {
+   content: "\f003";
+}
+.whatsapp:before {
+   content: "\f232";
+}
+
+
+header {
+   background-color: #fff;
+}
+header .head1 {
+   z-index: 1000;
+   position: fixed;
+   display: block;
+   padding: 5px 0;
+   width: 100%;
+   height: 64px;
+   background-color: #fff;
+   border-bottom: 1px solid #4CAB2D;
+   text-align: initial;
+   transition-duration: .15s;
+}
+header .head1 > .media {
+   height: 100%;
+}
+header .head1 img {
+   position: absolute;
+   display: inline-block;
+   width: auto;
+   height: 80%;
+   margin: 0;
+   top: 50%;
+   transform: translateY(-50%);
+}
+header .head1 #hamburger {
+   background-color: var(--azul);
+}
+header .head1 .grid {
+   position: relative;
+   height: 100%;
+   grid-gap: 0 0;
+   grid-template-columns: 20% auto;
+   grid-template-areas: '. .';
+}
+header .head1 .menu-hv {
+   position: absolute;
+   display: inline-block;
+   top: 58%;
+   right: 0;
+   transform: translateY(-58%);
+}
+header .head1 .menu-hv li a {
+   font-size: .9em;
+   text-transform: uppercase;
+}
+
+footer {                           /*** Para o footer aparecer por debaixo do resta da página, */
+   position: fixed;                /*** definir a prop display do body para table e a position */
+   bottom: 0;                      /*** do footer para fixed. Além disso, a margin inferior de */
+   width: 100%;                    /*** #site deve ser definida para um valor itual a altura   */
+   margin: 0;                      /*** do fotter.                                             */
+   padding: 80px 0 30px 0;
+   color: #fff;  /*#888;*/
+   background-color: var(--cinza); /*#4CAB2D;*/
+}
+footer .grid {
+   margin-bottom: 50px;
+   grid-gap: 0 5%;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-areas: '. . .';
+}
+
+footer h2 {
+   font-size: 1.2em;
+}
+footer #copyright {
+   font-size: .8em;
+   text-align: center;
+}
+footer a:link,
+footer a:visited {
+   color: inherit;
+   filter: brightness(0.7);
+}
+footer a:hover,
+footer a:active {
+   color: inherit;
+}
+footer p > a {
+   border-bottom: none;   /*** sem cor para erdar a cor do texto. */
+}
+
+
+
+#button_bar {
+   display: block;
+   margin-top: 15px;
+   text-align: center;
+}
+
+.btn {
+   margin-top: 20px;
+   margin-right: 10px;
+   padding: 8px 20px;
+   font-size: 1em;
+   font-family: "QuicksandBold";
+   background-color: var(--azul);
+   border: 1px solid var(--azul);
+   color: #FFF;
+}
+.btn:not(:disabled):not(.disabled) {
+   cursor: pointer;
+}
+#voltar.btn,
+#copiar.btn {
+   display: none;
+}
+#reset.btn {
+   background-color: var(--cinza);
+   border: 1px solid var(--cinza);
+   -webkit-border-radius: 0;
+   -moz-border-radius: 0;
+   border-radius: 0;
+}
+
+
+
+#corpo {
+   position: relative;
+   z-index: 100;
+   margin-bottom: 295px;
+   background-color: #fff;
+   box-shadow: 0 2px 10px -2px #AAAAAA
+}
+#corpo #header2{
+   padding: 10px 0;
+   background-color: #4CAB2D;
+   color: #fff;
+   font-size: 1.7em;
+}
+
+
+
+#apresentacao {
+   padding: 80px 0;
+   background-color: #FFF;
+}
+#apresentacao h1 {
+   font-size: 2em;
+}
+#apresentacao .grid {
+   grid-gap: 0 10%;
+   grid-template-columns: repeat(2,1fr);
+   grid-template-areas: 'a b';
+}
+
+#apresentacao .grid .a,
+#apresentacao .grid .b {
+   position: relative;
+}
+
+
+
+#destaque {
+   padding: 80px 0;
+   background-color: var(--cinza);
+   color: #f0f0f0;
+}
+
+
+
+
+
+/*** MOBILE MEDIA */
+@media (max-width:767px) {
+
+   body {
+      font-size: 18px;
+      font-weight: 700;
+   }
+
+   h1 {
+      font-size: 2em;
+   }
+
+   .media .media {
+      width: 100%;
+   }
+
+   input[type="radio"] {
+      width: 20px;
+      height: 20px;
+      margin-bottom: 10px;
+   }
+
+
+   header .head1 {
+      /*height: 20vw;*/
+      padding: 0 10px;
+   }
+   header .head1 .grid {
+      position: initial;
+      grid-template-columns: 100%;
+      grid-template-areas: '.' '.';
+   }
+   header .head1 img {
+      height: 70%;
+   }
+   header .head1 nav {
+      position: fixed;
+      display: block;
+      overflow: auto;
+      left: -100%;
+      height: 100vh;
+      width: 100vw;
+      padding-top: 20px;
+      padding-bottom: 100px;
+      background-color: var(--cinza);
+      transition-duration: .5s;
+   }
+   header .head1 .menu-hv {
+      position: initial;
+      display: initial;
+      top: unset;
+      transform: unset;
+   }
+   header .head1 .menu-hv li {
+      border: none;
+   }
+   ul.menu-hv > li a:link,
+   ul.menu-hv > li a:visited {
+      padding: 18px;
+      color: var(--azure);
+   }
+
+
+   footer {
+      position: initial;
+   }
+   footer .grid {
+      grid-gap: 30px 0;
+      grid-template-columns: 100%;
+      grid-template-areas: '.' '.' '.';
+   }
+
+
+   #corpo {
+      margin-bottom: 0 !important;
+   }
+
+
+   #apresentacao .grid {
+      text-align: center;
+      grid-gap: 25px 0;
+      grid-template-columns: 100%;
+      grid-template-areas: 'a' 'b';
+   }
+   #apresentacao .grid .vertical-center {
+      position: initial;
+      margin-top: 0;
+      -ms-transform: none;
+      transform: none;
+   }
+
+}
+
+/*** TABLE MEDIA */
+@media (min-width:768px) and (max-width:1024px) {
+
+   .media {
+      width: 90%;
+   }
+   .media .media {
+      width: 100%;
+   }
+
+
+   header .head1 {
+      height: auto;
+      padding: 12px 0 3px 0;
+   }
+   header .head1 .grid {
+      position: initial;
+      height: auto;
+      grid-gap: 10px 0;
+      grid-template-columns: 100%;
+      grid-template-areas: '.' '.';
+   }
+   header .head1 img {
+      position: initial;
+      display: block;
+      width: 20vw;
+      height: auto;
+      margin: 0 auto;
+      top: unset;
+      -ms-transform: none;
+      transform: none;
+   }
+   header .head1 nav {
+      width: 100%;
+      margin: 5px auto;
+   }
+   header .head1 .menu-hv {
+      position: initial;
+      display: table;
+      margin: 0 auto;
+      top: unset;
+      -ms-transform: none;
+      transform: none;
+   }
+   header .head1 .menu-hv li {
+      text-align: center;
+   }
+
+
+
+   #apresentacao .grid .a img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+   }
+   #apresentacao .grid .b .vertical-center {
+      position: initial;
+      top: unset;
+      -ms-transform: none;
+      transform: none;
+   }
+
+
+}
+
+/*** DESKTOP MEDIA */
+@media (min-width: 1024px) {
+
+}
+
+
+

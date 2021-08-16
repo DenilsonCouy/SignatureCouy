@@ -1,0 +1,100 @@
+/***
+   FLEX BOX
+   Para duvidas consulte os sites
+   https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+   https://www.w3schools.com/cssref/css3_pr_flex.asp
+*/
+@charset "ISO-8859-1";
+
+.flex_box {
+   display: flex !important;
+   display: -webkit-flex;
+   display: -ms-flexbox;
+
+   flex-direction: row;
+   -webkit-flex-direction: row;
+   -ms-flex-direction: row;
+
+   flex-wrap: wrap;
+   -webkit-flex-wrap: wrap;
+   -ms-flex-wrap: wrap;
+
+   justify-content: flex-start;  /* center; space-between; space-arround; flex-start; * /
+   -webkit-justify-content: flex-start;  /* space-between; space-arround; flex-start; */
+   -ms-flex-pack: justify;
+
+   align-content: stretch;
+   -webkit-align-content: stretch;
+   -ms-flex-line-pack: stretch;
+
+   align-items: stretch;
+   -webkit-align-items: stretch;
+   -ms-flex-align: stretch;
+
+}
+
+.flex_box .flex_cell {
+   flex: 0;             /** Se igual a 0, permite gap entre as colunas. */
+   flex-basis: 33%;     /** A largura inicial das colunas. Soh funciona se flex for igual a 0 */
+   order: 0;            /** Por padrão, os itens flex são apresentados na ordem da origem. No entanto, a propriedade de ordem controla a ordem em que aparecem no recipiente flex. */
+   flex-grow: 1;        /** Isso define a capacidade de um item flexível crescer na vertical, se necessário. */
+   flex-shrink: 1;      /** Isso define a capacidade de um item flexível encolher, se necessário. */
+   align-self: auto;    /** Isso permite que o alinhamento padrão (ou o especificado por itens de alinhamento) seja substituído por itens individuais flexíveis. */
+}
+
+
+
+
+
+/**** ---------------------------------------------------------------------------------- */
+/**** TECNICA GRID PARA LAYOUTS MAIS FLEXIVEIS */
+
+
+/**
+*   Definicao das propriedades do elemento que contem a grade.
+*/
+.grid {
+   display: grid !important;
+   grid-gap: 10px;
+   grid-template-columns: repeat(4, 1fr);  /*auto;*/
+   grid-auto-columns: 1fr;  /*minmax(min-content, max-content);*/
+   grid-template-rows: auto;  /*50px 50px;*/
+   grid-template-areas:      /* Eh aqui que a grid eh definida e deve ser modificada na css da página conforme a necessidade.  */
+      'a b c d'              /* a, b, c... soa as areas de grid. */
+      'e f g h'              /* A area a, ocupa a primeira coluna e duas linhas da grade. Ja a area f, ocupa duas colunas d uma linha. */
+   ;
+}
+
+
+/**
+*   Aqui entra a propriedades gerais das celulas da grade.
+*/
+.grid .box {
+   /*display: table;*/
+}
+
+
+/**
+*   Aqui são definidas as areas da grade para as classes.
+*   O elemento com a classe a, sera a area a da grade e assim por diante.
+*/
+.grid .a { grid-area: a; }
+.grid .b { grid-area: b; }
+.grid .c { grid-area: c; }
+.grid .d { grid-area: d; }
+.grid .e { grid-area: e; }
+.grid .f { grid-area: f; }
+.grid .g { grid-area: g; }
+.grid .h { grid-area: h; }
+.grid .i { grid-area: i; }
+.grid .j { grid-area: j; }
+.grid .k { grid-area: k; }
+.grid .l { grid-area: l; }
+.grid .m { grid-area: m; }
+.grid .n { grid-area: n; }
+.grid .o { grid-area: o; }
+.grid .p { grid-area: p; }
+.grid .q { grid-area: q; }
+.grid .r { grid-area: r; }
+.grid .s { grid-area: s; }
+
